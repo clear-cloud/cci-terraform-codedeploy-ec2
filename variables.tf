@@ -1,3 +1,5 @@
+variable "filterkey" {}
+variable "filtervalue" {}
 variable "orchestration" {}
 variable "environment" {}
 

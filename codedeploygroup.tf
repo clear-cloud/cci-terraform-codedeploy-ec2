@@ -8,9 +8,9 @@ resource "aws_codedeploy_deployment_group" "example" {
 
   ec2_tag_set {
     ec2_tag_filter {
-      key   = "filterkey1"
+      key   = "${var.filterkey}"
       type  = "KEY_AND_VALUE"
-      value = "filtervalue"
+      value = "${var.filtervalue}"
     }
   }
 }
