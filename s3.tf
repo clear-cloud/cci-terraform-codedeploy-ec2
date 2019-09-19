@@ -17,9 +17,10 @@ resource "aws_s3_bucket" "data" {
   }
 
   lifecycle_rule {
+    enabled = "${var.lifecycle_rule_enabled}"
 
-   expiration {
+    expiration {
       days = 120
-   }
+    }
   }
 }
