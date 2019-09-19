@@ -15,4 +15,11 @@ resource "aws_s3_bucket" "data" {
     orchestration = "${var.orchestration}"
     purpose       = "${var.environment}-${aws_codedeploy_app.app.name}-data"
   }
+
+  lifecycle_rule {
+
+   expiration {
+      days = 120
+   }
+  }
 }
